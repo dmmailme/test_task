@@ -1,0 +1,2 @@
+#tail -f -c 20 -s 5 /var/lib/docker/Dockerfile/1/logs/access.log |grep -m 1 "192.168.1." >> /var/lib/docker/Dockerfile/1/logs/OutIP.log
+less /var/lib/docker/Dockerfile/1/logs/access.log | cut -d' ' -f1 | sort | uniq -c >> /var/lib/docker/Dockerfile/1/OutIP.log
